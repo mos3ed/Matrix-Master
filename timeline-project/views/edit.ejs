@@ -1,0 +1,6 @@
+<h1>Edit Post</h1>
+
+<form action="/<%= post._id %>?_method=PUT" method="POST">
+    <textarea name="post"><%= post.post %></textarea>
+    <button type="submit">Save</button>
+</form>

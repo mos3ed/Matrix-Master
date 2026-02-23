@@ -1,0 +1,10 @@
+<h1>Post Details</h1>
+
+<p><%= post.post %></p>
+<p><%= post.createdAt.toDateString() %></p>
+
+<a href="/edit/<%= post._id %>">Edit Post</a>
+
+<form action="/<%= post._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete</button>
+</form>

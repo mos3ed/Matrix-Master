@@ -1,0 +1,13 @@
+<h1>Timeline</h1>
+
+<form action="/" method="POST">
+    <textarea name="post" placeholder="Write your message"></textarea>
+    <button type="submit">Post a message</button>
+</form>
+
+<% posts.forEach(p => { %>
+    <div>
+        <p><%= p.post.substring(0, 50) %>...</p>
+        <a href="/<%= p._id %>">See More</a>
+    </div>
+<% }) %>
