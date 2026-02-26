@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Posts</title>
+  <link rel="stylesheet" href="/public/style.css"
+</head>
+<body>
+
+  <h1>All Posts</h1>
+
+  <% posts.forEach(post => { %>
+    <div style="margin-bottom: 20px; padding: 10px; border: 1px solid #ccc;">
+      <h2>
+        <a href="/post/<%= post._id %>">
+          <%= post.title %>
+        </a>
+      </h2>
+
+      <p><%= post.content.substring(0, 120) %>...</p>
+
+      <a href="/post/<%= post._id %>"> vieuw details </a>
+    </div>
+  <% }) %>
+
+</body>
+</html>
