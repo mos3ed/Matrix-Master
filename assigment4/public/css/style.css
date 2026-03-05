@@ -1,0 +1,42 @@
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.box {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.comment {
+    background: #eee;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+textarea, input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
