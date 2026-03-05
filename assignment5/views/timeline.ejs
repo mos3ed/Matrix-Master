@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/style.css">
+
+    </head>
+
+
+    <body>
+            <div class="timeline-wrapper">
+
+            <h1>Timeline</h1>
+
+            <p>Welcome <%= user.firstName %> <%= user.lastName %></p>
+            <a href="/logout">Log out</a>
+
+            <div class="new-post-box">
+                <form action="/post" method="POST">
+                    <textarea name="message" placeholder="What's on your mind?" required></textarea>
+                    <button type="submit">Post</button>
+                </form>
+            </div>
+
+            <% posts.forEach(post => { %>
+                <div class="post">
+                    <strong><%= post.user.firstName %> <%= post.user.lastName %></strong>
+                    <div class="post-date"><%= post.createdAt.toDateString() %></div>
+
+                    <p><%= post.message %></p>
+
+                    <div class="comments">
+                        <% comments.forEach(comment => { %>
+                            <% if (comment.post._id.toString() === post._id.toString()) { %>
+                                <p><strong><%= comment.user.firstName %>:</strong> <%= comment.message %></p>
+                            <% } %>
+                        <% }) %>
+                    </div>
+
+                    <form class="comment-form" action="/comment" method="POST">
+                        <input type="hidden" name="postId" value="<%= post._id %>">
+                        <input type="text" name="message" placeholder="Write a comment..." required>
+                        <button type="submit">Comment</button>
+                    </form>
+                </div>
+            <% }) %>
+
+        </div>
+
+    </body>
+</html>
