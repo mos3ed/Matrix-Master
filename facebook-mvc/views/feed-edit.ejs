@@ -1,0 +1,17 @@
+<%- include('layout', { body: `
+    <div class="form-box">
+        <h2>Edit Post</h2>
+
+        <form action="/feeds/${feed._id}?_method=PUT" method="POST">
+            <label>Name</label>
+            <input type="text" name="name" value="${feed.name}" required>
+
+            <label>Message</label>
+            <input type="text" name="message" value="${feed.message}" required>
+
+            <button type="submit">Update</button>
+        </form>
+
+        <a href="/feeds" class="btn-back">Back</a>
+    </div>
+` }) %>

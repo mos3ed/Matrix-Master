@@ -1,0 +1,9 @@
+<%- include('layout', { body: `
+    <div class="post">
+        <h3>${feed.name}</h3>
+        <p>${feed.message}</p>
+
+        <a class="btn-edit" href="/feeds/${feed._id}/edit">Edit</a>
+        <a class="btn-back" href="/feeds">Back</a>
+    </div>
+` }) %>

@@ -1,0 +1,29 @@
+<%- include('layout', { body: `
+    <div class="form-box">
+        <h2>Add a Post</h2>
+
+        <form action="/feeds" method="POST">
+            <label>Name</label>
+            <input type="text" name="name" required>
+
+            <label>Message</label>
+            <input type="text" name="message" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <h2>All Posts</h2>
+
+    ${feeds.map(feed => `
+        <div class="post">
+            <h3>${feed.name}</h3>
+            <p>${feed.message}</p>
+
+            <a class="btn-edit" href="/feeds/${feed._id}/edit">Edit</a>
+            <form action="/feeds/${feed._id}?_method=DELETE" method="POST" style="display:inline;">
+                <button class="btn-delete">Delete</button>
+            </form>
+        </div>
+    `).join('')}
+` }) %>

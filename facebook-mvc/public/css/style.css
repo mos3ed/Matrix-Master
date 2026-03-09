@@ -1,0 +1,106 @@
+/* ====== Global ====== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* ====== Header ====== */
+.header {
+    background: #1877f2;
+    padding: 15px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ====== Container ====== */
+.container {
+    width: 500px;
+    margin: 30px auto;
+}
+
+/* ====== Form ====== */
+.form-box {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px;
+    width: 100%;
+    background: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0f5fcc;
+}
+
+/* ====== Posts ====== */
+.post {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.post h3 {
+    margin: 0;
+    color: #1877f2;
+}
+
+.post p {
+    margin: 10px 0;
+}
+
+/* ====== Buttons ====== */
+.btn-edit {
+    background: #ffc107;
+    color: black;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.btn-delete {
+    background: #dc3545;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-back {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #1877f2;
+}
