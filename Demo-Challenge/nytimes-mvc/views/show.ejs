@@ -1,0 +1,15 @@
+<%- include("partials/header", { title: article.title }) %>
+
+<h2><%= article.title %></h2>
+
+<p class="article-content"><%= article.body %></p>
+
+<div class="actions">
+    <a class="btn" href="/edit/article/<%= article._id %>">Edit</a>
+
+    <form action="/delete/article/<%= article._id %>" method="POST" style="display:inline;">
+        <button class="btn danger" type="submit">Delete</button>
+    </form>
+</div>
+
+<%- include("partials/footer") %>

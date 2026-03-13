@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <a class="btn" href="\new.ejs">Add new article</a>
+
+    </head>
+    <body>
+        <%- include("partials/header", { title: "All Articles" }) %>
+
+        <h2>All Articles</h2>
+
+        <div class="articles-list">
+            <% articles.forEach(article => { %>
+                <div class="article-card">
+                    <h3><%= article.title %></h3>
+                    <p><%= article.body.substring(0, 120) %>...</p>
+                    <a class="btn" href="/article/<%= article._id %>">Read more</a>
+                </div>
+            <% }) %>
+        </div>
+
+        <%- include("partials/footer") %>
+
+    </body>
+</html>

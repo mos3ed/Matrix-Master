@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+}
+
+.navbar {
+    background: black;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background: #333;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.danger {
+    background: #b30000;
+}
+
+.error {
+    color: red;
+}
+
+.article-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+}

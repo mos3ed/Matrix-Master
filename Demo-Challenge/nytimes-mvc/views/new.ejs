@@ -1,0 +1,22 @@
+<%- include("partials/header", { title: "Add New Article" }) %>
+
+<h2>Add New Article</h2>
+
+<form action="/new/article" method="POST" class="form">
+
+    <label>Title</label>
+    <input type="text" name="title" value="<%= data.title %>">
+    <% if (errors.title) { %>
+        <p class="error"><%= errors.title %></p>
+    <% } %>
+
+    <label>Article</label>
+    <textarea name="body"><%= data.body %></textarea>
+    <% if (errors.body) { %>
+        <p class="error"><%= errors.body %></p>
+    <% } %>
+
+    <button type="submit">Add article</button>
+</form>
+
+<%- include("partials/footer") %>
